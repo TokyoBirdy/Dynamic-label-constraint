@@ -9,14 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let staticText = "let me gow like in the mateor garden, it's short but beautiful"
+    let staticText = "8s"
 
-    var txt: String = ""
+    var txt: String = "8s"
+
+    @IBOutlet var labelBottomConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        txt = staticText
+        adjustableLabel.text = staticText
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,9 +32,26 @@ class ViewController: UIViewController {
         txt += staticText
         adjustableLabel.text = txt
     }
+    
     @IBAction func retracted(_ sender: Any) {
         txt = staticText
         adjustableLabel.text = txt
+    }
+
+    @IBAction func animateLabelPosition(_ sender: Any) {
+       // labelBottomConstraint.constant = 20
+        UIView.animate(withDuration: 0.3) {
+            self.adjustableLabel.center.y -= 8
+            self.view.layoutIfNeeded()
+        }
+    }
+
+    @IBAction func animatedownLabelPosition(_ sender: Any) {
+        //labelBottomConstraint.constant = 12
+        UIView.animate(withDuration: 0.3) {
+            self.adjustableLabel.center.y += 8
+            self.view.layoutIfNeeded()
+        }
     }
 }
 

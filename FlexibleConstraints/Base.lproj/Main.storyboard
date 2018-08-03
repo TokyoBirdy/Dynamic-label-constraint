@@ -57,7 +57,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="0QA-XX-dyo" firstAttribute="centerY" secondItem="GuE-VM-nph" secondAttribute="centerY" id="0Jy-1O-TVd"/>
+                                    <constraint firstItem="0QA-XX-dyo" firstAttribute="centerY" secondItem="GuE-VM-nph" secondAttribute="centerY" priority="500" id="0Jy-1O-TVd"/>
                                     <constraint firstAttribute="height" constant="300" id="A47-fn-mZ1"/>
                                     <constraint firstAttribute="trailing" secondItem="0QA-XX-dyo" secondAttribute="trailing" constant="16" id="NQ3-pu-9TP"/>
                                     <constraint firstItem="0QA-XX-dyo" firstAttribute="leading" secondItem="GuE-VM-nph" secondAttribute="leading" constant="16" id="vYg-B7-UEu"/>
@@ -79,6 +79,22 @@
                                     <action selector="retracted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sP-4M-3bw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-l7-3jI">
+                                <rect key="frame" x="72" y="233" width="187" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Animate up label constraint"/>
+                                <connections>
+                                    <action selector="animateLabelPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bZ-Ri-ydA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-yt-ocn">
+                                <rect key="frame" x="47" y="271" width="207" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Animate down label constraint"/>
+                                <connections>
+                                    <action selector="animatedownLabelPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SI5-C0-mhX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -90,6 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="adjustableLabel" destination="Ucf-FW-2hW" id="hv1-gz-Zyt"/>
+                        <outlet property="labelBottomConstraint" destination="ZQd-KE-cOk" id="umT-fV-NmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
