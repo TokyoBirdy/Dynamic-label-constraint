@@ -42,7 +42,6 @@ class ViewController: UIViewController {
        // labelBottomConstraint.constant = 20
         UIView.animate(withDuration: 0.3) {
             self.adjustableLabel.center.y -= 8
-            self.view.layoutIfNeeded()
         }
     }
 
@@ -50,7 +49,6 @@ class ViewController: UIViewController {
         //labelBottomConstraint.constant = 12
         UIView.animate(withDuration: 0.3) {
             self.adjustableLabel.center.y += 8
-            self.view.layoutIfNeeded()
         }
     }
 }
